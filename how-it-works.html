@@ -1,0 +1,102 @@
+<!DOCTYPE html><!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8"><!--[if IE]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+    <title>Dokku Alternative</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body><!--[if lt IE 8]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+    </p><![endif]-->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-17702108-4');
+      ga('send', 'pageview');
+    </script>
+    <div class="atk-layout">
+      <div class="atk-layout-row">
+        <div class="atk-layout-cell atk-swatch-ink">
+          <div class="atk-move-center atk-col-8">
+            <div class="atk-bar atk-cells atk-cells-gutter atk-section-small">
+              <div class="atk-cell"><a href="index.html" class="atk-size-kilo atk-text-nowrap"><strong>Dokku Alternative</strong></a></div>
+              <div class="atk-cell atk-jackscrew">
+                <ul class="atk-menu-horizontal">
+                  <li><a href="how-it-works.html" class="atk-padding-small">How does it work</a></li>
+                  <li><a href="try-it.html" class="atk-padding-small">Try It!</a></li>
+                  <li><a href="javascript:void(0)" class="atk-padding-small">What's new?</a></li>
+                </ul>
+              </div>
+              <div class="atk-cell atk-text-nowrap">
+                <div class="atk-actions"><a href="javascript:void(0)" class="atk-label atk-swatch-yellow"><i class="icon-github-1"></i>&nbsp;
+                    GitHub</a><span class="atk-sep">⋅</span><a href="javascript:void(0)">Contact</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="atk-layout-row">
+        <div class="atk-layout atk-layout-cell">
+          <div class="atk-layout-column atk-layout-expand">
+            <div class="atk-section-large atk-swatch-white">
+              <div class="atk-wrapper">
+                <h2>Introduction</h2>
+                <p>
+                  Dokku Alt is most suitable to deploy in-house low-cost multi-site
+                  deployment environments which are secure and easy to manage. If
+                  you have ever used Apache with VirtualHosts then Dokku Alt is a
+                  modern replacament for this technology.
+                </p>
+                <p>
+                  Built on top of Docker, Dokku Alt is a manager for your websites,
+                  running alongside any imaginable framework, language or webserver.
+                </p>
+                <div class="atk-cells">
+                  <div class="atk-cell atk-expand">
+                    <h3>Acessing Dokku-alt node</h3>
+                    <p>Once Dokku-Alt is deployed, you can access it through ssh like this<code class="atk-box">$ ssh dokku@my.node.org mariadb:create myapp newdb</code></p>
+                    <p>
+                      The above command will create new database for an
+                      application and automatically link with it.
+                    </p>
+                  </div>
+                  <div class="atk-cell"><img src="img/schema-1.png" width="292"></div>
+                </div>
+                <div class="atk-cells">
+                  <div class="atk-cell atk-expand">
+                    <h3>Deploying application to your Node</h3>
+                    <p>
+                      Create a new "git" repository and deploy it directly
+                      inside a new container like this:<code class="atk-box">$ git add remote deploy dokku@my.dokku-alt.org:myapp<br>$ git push deploy master</code>
+                    </p>
+                    <p>
+                      Docker will set up a new container for your application,
+                      install necessary dependencies and finally link your
+                      application with a domain of your choice.
+                    </p>
+                  </div>
+                  <div class="atk-cell"><img src="img/schema-2.png" width="381"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="atk-layout-row atk-layout-expand atk-swatch-gray">
+        <div class="atk-layout-cell">
+          <div class="atk-wrapper atk-section">&copy 2014, Distributed under MIT License.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

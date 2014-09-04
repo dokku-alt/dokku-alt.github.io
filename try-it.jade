@@ -1,0 +1,61 @@
+extends index.jade
+
+block content
+    .atk-section-large.atk-swatch-white
+        .atk-wrapper
+            h2 Requirements
+            p
+                | You need to run Ubuntu 14.04 LTS. We recommend you to create a
+                | new VPS instance for this. The following bootstrap script
+                | will install all necessary components:
+
+            pre.atk-box
+                | $ sudo bash -c "$(curl -fsSL bit.ly/dokku-alt)"
+
+            p
+                | After - just follow on-screen instructions.
+
+            h3 Deploy an App
+            p
+                | Now you can deploy apps on your Dokku. Let's deploy the
+                a(href="https://github.com/heroku/node-js-sample" target="_blank") Heroku Node.js sample app
+                |. All you have to do is add a remote to name the app. It's created on-the-fly.
+
+
+
+            pre.atk-box
+                | $ git clone https://github.com/heroku/node-js-sample
+                | $ cd node-js-sample
+                | $ git remote add deploy dokku@my.dokku-alt.com:node-js-app
+                | $ git push deploy master
+                | Counting objects: 296, done.
+                | Delta compression using up to 4 threads.
+                | Compressing objects: 100% (254/254), done.
+                | Writing objects: 100% (296/296), 193.59 KiB, done.
+                | Total 296 (delta 25), reused 276 (delta 13)
+                | -----> Building node-js-app ...
+                |        Node.js app detected
+                | -----> Resolving engine versions
+                | ... blah blah blah ...
+                | -----> Application deployed:
+                |        http://node-js-app.progriumapp.com
+
+            p You're done!
+
+            p
+                | Right now Buildstep supports buildpacks for Node.js, Ruby, Python,
+                a(href="https://github.com/progrium/buildstep#supported-buildpacks" target="_blank") and more
+                | . It's not hard to extend the list with your own buildpack. Please check the documentation
+                | for your particular build pack as you may need to include configuration files (such as a
+                | Dockerfile or Procfile) in your project root.
+
+
+
+            h3 Useful Links
+            p
+                a(href="https://github.com/dokku-alt/dokku-alt#upgrade-and-beta-releases")
+                    i.icon-tag-1.atk-swatch-blue
+                    &nbsp;
+                    | Manual Intructions
+                    br
+

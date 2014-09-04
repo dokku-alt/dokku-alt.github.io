@@ -1,0 +1,98 @@
+<!DOCTYPE html><!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8"><!--[if IE]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+    <title>Dokku Alternative</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body><!--[if lt IE 8]>
+    <p class="browsehappy">
+      You are using an <strong>outdated</strong> browser.
+      Please <a href="http://browsehappy.com/">upgrade your browser</a>
+      to improve your experience.
+    </p><![endif]-->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-17702108-4');
+      ga('send', 'pageview');
+    </script>
+    <div class="atk-layout">
+      <div class="atk-layout-row">
+        <div class="atk-layout-cell atk-swatch-ink">
+          <div class="atk-move-center atk-col-8">
+            <div class="atk-bar atk-cells atk-cells-gutter atk-section-small">
+              <div class="atk-cell"><a href="index.html" class="atk-size-kilo atk-text-nowrap"><strong>Dokku Alternative</strong></a></div>
+              <div class="atk-cell atk-jackscrew">
+                <ul class="atk-menu-horizontal">
+                  <li><a href="how-it-works.html" class="atk-padding-small">How does it work</a></li>
+                  <li><a href="try-it.html" class="atk-padding-small">Try It!</a></li>
+                  <li><a href="javascript:void(0)" class="atk-padding-small">What's new?</a></li>
+                </ul>
+              </div>
+              <div class="atk-cell atk-text-nowrap">
+                <div class="atk-actions"><a href="javascript:void(0)" class="atk-label atk-swatch-yellow"><i class="icon-github-1"></i>&nbsp;
+                    GitHub</a><span class="atk-sep">⋅</span><a href="javascript:void(0)">Contact</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="atk-layout-row">
+        <div class="atk-layout atk-layout-cell">
+          <div class="atk-layout-column atk-layout-expand">
+            <div class="atk-section-large atk-swatch-white">
+              <div class="atk-wrapper">
+                <h2>Requirements</h2>
+                <p>
+                  You need to run Ubuntu 14.04 LTS. We recommend you to create a
+                  new VPS instance for this. The following bootstrap script
+                  will install all necessary components:
+                </p>
+                <pre class="atk-box">$ sudo bash -c "$(curl -fsSL bit.ly/dokku-alt)"</pre>
+                <p>After - just follow on-screen instructions.</p>
+                <h3>Deploy an App</h3>
+                <p>Now you can deploy apps on your Dokku. Let's deploy the<a href="https://github.com/heroku/node-js-sample" target="_blank">Heroku Node.js sample app</a>. All you have to do is add a remote to name the app. It's created on-the-fly.</p>
+                <pre class="atk-box">$ git clone https://github.com/heroku/node-js-sample
+$ cd node-js-sample
+$ git remote add deploy dokku@my.dokku-alt.com:node-js-app
+$ git push deploy master
+Counting objects: 296, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (254/254), done.
+Writing objects: 100% (296/296), 193.59 KiB, done.
+Total 296 (delta 25), reused 276 (delta 13)
+-----> Building node-js-app ...
+       Node.js app detected
+-----> Resolving engine versions
+... blah blah blah ...
+-----> Application deployed:
+       http://node-js-app.progriumapp.com</pre>
+                <p>You're done!</p>
+                <p>Right now Buildstep supports buildpacks for Node.js, Ruby, Python,<a href="https://github.com/progrium/buildstep#supported-buildpacks" target="_blank">and more</a>. It's not hard to extend the list with your own buildpack. Please check the documentation
+                  for your particular build pack as you may need to include configuration files (such as a
+                  <Dockerfile>or Procfile) in your project root.</Dockerfile>
+                </p>
+                <h3>Useful Links</h3>
+                <p><a href="https://github.com/dokku-alt/dokku-alt#upgrade-and-beta-releases"><i class="icon-tag-1 atk-swatch-blue"></i>&nbsp;
+                    Manual Intructions<br></a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="atk-layout-row atk-layout-expand atk-swatch-gray">
+        <div class="atk-layout-cell">
+          <div class="atk-wrapper atk-section">&copy 2014, Distributed under MIT License.</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

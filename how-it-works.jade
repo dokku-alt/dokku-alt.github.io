@@ -1,0 +1,49 @@
+extends index.jade
+
+block content
+    .atk-section-large.atk-swatch-white
+        .atk-wrapper
+            h2 Introduction
+            p
+                | Dokku Alt is most suitable to deploy in-house low-cost multi-site
+                | deployment environments which are secure and easy to manage. If
+                | you have ever used Apache with VirtualHosts then Dokku Alt is a
+                | modern replacament for this technology.
+
+            p
+                | Built on top of Docker, Dokku Alt is a manager for your websites,
+                | running alongside any imaginable framework, language or webserver.
+
+            .atk-cells
+                .atk-cell.atk-expand
+                    h3 Acessing Dokku-alt node
+                    p
+                        | Once Dokku-Alt is deployed, you can access it through ssh like this
+
+                        code.atk-box
+                            | $ ssh dokku@my.node.org mariadb:create myapp newdb
+
+                    p
+                        | The above command will create new database for an
+                        | application and automatically link with it.
+                .atk-cell
+                    img(src="img/schema-1.png" width="292")
+
+            .atk-cells
+                .atk-cell.atk-expand
+                    h3 Deploying application to your Node
+                    p
+                        | Create a new "git" repository and deploy it directly
+                        | inside a new container like this:
+
+                        code.atk-box
+                            | $ git add remote deploy dokku@my.dokku-alt.com:myapp
+                            br
+                            | $ git push deploy master
+
+                    p
+                        | Docker will set up a new container for your application,
+                        | install necessary dependencies and finally link your
+                        | application with a domain of your choice.
+                .atk-cell
+                    img(src="img/schema-2.png" width="381")

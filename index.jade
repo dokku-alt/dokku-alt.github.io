@@ -1,0 +1,138 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html(class='no-js')
+    <!--<![endif]-->
+    head
+        meta(charset='utf-8')
+        <!--[if IE]><!-->
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        <!--<![endif]-->
+        title Dokku Alternative
+        meta(name='description', content='')
+        link(rel='stylesheet', href='css/style.css')
+    body
+        include includes/browsehappy
+        include includes/analytics
+        .atk-layout
+            .atk-layout-row
+                .atk-layout-cell.atk-swatch-ink
+                    .atk-move-center.atk-col-8
+                        .atk-bar.atk-cells.atk-cells-gutter.atk-section-small
+                            .atk-cell
+                              a.atk-size-kilo(href='index.html').atk-text-nowrap
+                                strong Dokku Alternative
+                            .atk-cell.atk-jackscrew
+                              ul.atk-menu-horizontal
+                                li
+                                  a.atk-padding-small(href='how-it-works.html') How does it work
+                                li
+                                  a.atk-padding-small(href='try-it.html') Try It!
+                                li
+                                  a.atk-padding-small(href='javascript:void(0)') What's new?
+                            .atk-cell.atk-text-nowrap
+                              .atk-actions
+                                a.atk-label.atk-swatch-yellow(href='javascript:void(0)')
+                                    i.icon-github-1
+                                    &nbsp;
+                                    | GitHub
+
+                                span.atk-sep ⋅
+                                a(href='javascript:void(0)') Contact
+
+
+
+            .atk-layout-row
+                .atk-layout.atk-layout-cell
+                    .atk-layout-column.atk-layout-expand
+                      block content
+                        .atk-section-large.atk-swatch-gray
+                            .atk-wrapper.atk-size-kilo
+                                | Dokku-alt is a Docker powered mini-Heroku. The smallest PaaS implementation you've ever seen.
+                                | It's fork of original dokku. The idea behind this fork is to provide complete
+                                | solution with plugins covering most of use-cases which are stable and well
+                                | tested.
+                        .atk-section-large.atk-swatch-white
+                            .atk-wrapper
+                                .atk-row
+                                    .atk-col-8
+                                        h2 Supported Features
+                                        p
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Debian-based installation and upgrade!
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Git deploy
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for MariaDB, PostgreSQL, MongoDB and Redis databases
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for Dockerfile
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for service-only applications
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for domains and redirects
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for TLS and wildcard certificates
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for Docker-args and container persistent volumes
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for container's TOP
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Built-in support for foreman-based Procfile
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Data volumes with host-based volumes
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Preboot / zero-downtime deploy
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Enter and exec commands in already running containers
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Access-control: deploy only keys (BETA)
+
+
+                                    .atk-col-4
+                                        .atk-box.atk-swatch-gray
+                                            h2 Recent Changes
+                                            p
+                                                b 0.3.6 Release (Aug 21)
+                                                br
+                                                | Improved import and export of database schemas,
+                                                | added warning about potential firewall
+                                                | setup problem, improved <code>bootstrap.sh</code>
+                                            p
+                                                b 0.3.5 Release (Aug 1)
+                                                br
+                                                | Implemented support for data volumes,
+                                                | finalized preboot mode (zero downtime deploy)
+                                                | added support for interactive shell for running containers.
+            .atk-layout-row.atk-layout-expand.atk-swatch-gray
+                .atk-layout-cell
+                    .atk-wrapper.atk-section
+                        &copy 2014, Distributed under MIT License.
