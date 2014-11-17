@@ -18,7 +18,7 @@ block content
                 .atk-cell.atk-expand
                     h3 Acessing Dokku-alt node
                     p
-                        | Once Dokku-Alt is deployed, you can access it through ssh like this
+                        | Once Dokku-Alt is deployed, you can access it through ssh like this:
 
                         code.atk-box
                             | $ ssh dokku@my.node.org mariadb:create myapp newdb
@@ -47,3 +47,22 @@ block content
                         | application with a domain of your choice.
                 .atk-cell
                     img(src="img/schema-2.png" width="381")
+
+            h3 Adding Database or Volume support
+            p
+                | If your application relies on database or stores files
+                | locally, dokku can easily set this up for you.
+
+            code.atk-box
+                | $ dokku volume:create vol1 /data/volume1
+                br
+                | $ dokku volume:link myapp1 vol1
+                br
+                | $ dokku volume:link myapp2 vol1
+
+            code.atk-box
+                | $ dokku mariadb:create mydb
+                br
+                | $ dokku mariadb:link myapp1 mydb
+                br
+                | $ dokku mariadb:link myapp2 mydb

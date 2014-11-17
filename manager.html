@@ -51,48 +51,33 @@
           <div class="atk-layout-column atk-layout-expand">
             <div class="atk-section-large atk-swatch-white">
               <div class="atk-wrapper">
-                <h2>Introduction</h2>
+                <h2>Dokku Alt Manager</h2>
                 <p>
-                  Dokku Alt is most suitable to deploy in-house low-cost multi-site
-                  deployment environments which are secure and easy to manage. If
-                  you have ever used Apache with VirtualHosts then Dokku Alt is a
-                  modern replacament for this technology.
+                  Manager is a web application written in PHP and Agile Toolkit
+                  which helps you manage your Dokku-alt hosts through your
+                  browser
+                </p><img src="https://github.com/romaninsh/dokku-alt-manager/raw/master/doc/screenshot.png" width="100%">
+                <h3>Enabling Dokku-alt-manager</h3>
+                <p>dokku-alt-manager (<a href="https://github.com/romaninsh/dokku-alt-manager">https://github.com/romaninsh/dokku-alt-manager</a>) is a separate open-source project with a goal to deliver
+                  Web-based user interface to control one or several dokku-alt
+                  instances. The manager uses SSH and keys to communicate with
+                  your dokku-alt servers. If you running multiple dokku-alt
+                  nodes, you would need only one manager. To install,
+                  run:
                 </p>
+                <pre class="atk-box">$ dokku manager:install</pre>
+                <p>You're done!</p>
+                <p>Open the URL provided and don't forget to set up a username and a password.</p>
                 <p>
-                  Built on top of Docker, Dokku Alt is a manager for your websites,
-                  running alongside any imaginable framework, language or webserver.
+                  Dokku alt manager is under active development. You can upgrade to a new
+                  version by running
                 </p>
-                <div class="atk-cells">
-                  <div class="atk-cell atk-expand">
-                    <h3>Acessing Dokku-alt node</h3>
-                    <p>Once Dokku-Alt is deployed, you can access it through ssh like this:<code class="atk-box">$ ssh dokku@my.node.org mariadb:create myapp newdb</code></p>
-                    <p>
-                      The above command will create new database for an
-                      application and automatically link with it.
-                    </p>
-                  </div>
-                  <div class="atk-cell"><img src="img/schema-1.png" width="292"></div>
-                </div>
-                <div class="atk-cells">
-                  <div class="atk-cell atk-expand">
-                    <h3>Deploying application to your Node</h3>
-                    <p>
-                      Create a new "git" repository and deploy it directly
-                      inside a new container like this:<code class="atk-box">$ git add remote deploy dokku@my.dokku-alt.com:myapp<br>$ git push deploy master</code>
-                    </p>
-                    <p>
-                      Docker will set up a new container for your application,
-                      install necessary dependencies and finally link your
-                      application with a domain of your choice.
-                    </p>
-                  </div>
-                  <div class="atk-cell"><img src="img/schema-2.png" width="381"></div>
-                </div>
-                <h3>Adding Database or Volume support</h3>
-                <p>
-                  If your application relies on database or stores files
-                  locally, dokku can easily set this up for you.
-                </p><code class="atk-box">$ dokku volume:create vol1 /data/volume1<br>$ dokku volume:link myapp1 vol1<br>$ dokku volume:link myapp2 vol1</code><code class="atk-box">$ dokku mariadb:create mydb<br>$ dokku mariadb:link myapp1 mydb<br>$ dokku mariadb:link myapp2 mydb</code>
+                <pre class="atk-box">$ dokku manager:upgrade</pre>
+                <p>If you wish to upgrade to a specific version pass an argument</p>
+                <pre class="atk-box">$ dokku manager:upgrade 0.3</pre>
+                <h3>Useful Links</h3>
+                <p><a href="http://book.agiletoolkit.org/"><i class="icon-tag-1 atk-swatch-blue"></i>&nbsp;
+                    Agile Toolkit Documentation<br></a></p>
               </div>
             </div>
           </div>

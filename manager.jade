@@ -1,0 +1,55 @@
+extends index.jade
+
+block content
+    .atk-section-large.atk-swatch-white
+        .atk-wrapper
+            h2 Dokku Alt Manager
+            p
+                | Manager is a web application written in PHP and Agile Toolkit
+                | which helps you manage your Dokku-alt hosts through your
+                | browser
+
+            img(src="https://github.com/romaninsh/dokku-alt-manager/raw/master/doc/screenshot.png" width="100%")
+
+
+            h3 Enabling Dokku-alt-manager
+
+            p
+                | dokku-alt-manager (
+                a(href="https://github.com/romaninsh/dokku-alt-manager") https://github.com/romaninsh/dokku-alt-manager
+                | ) is a separate open-source project with a goal to deliver
+                | Web-based user interface to control one or several dokku-alt
+                | instances. The manager uses SSH and keys to communicate with
+                | your dokku-alt servers. If you running multiple dokku-alt
+                | nodes, you would need only one manager. To install,
+                | run:
+
+            pre.atk-box
+                | $ dokku manager:install
+
+            p You're done!
+
+            p
+                | Open the URL provided and don't forget to set up a username and a password.
+
+            p
+                | Dokku alt manager is under active development. You can upgrade to a new
+                | version by running
+
+            pre.atk-box
+                | $ dokku manager:upgrade
+
+            p
+                | If you wish to upgrade to a specific version pass an argument
+
+            pre.atk-box
+                | $ dokku manager:upgrade 0.3
+
+            h3 Useful Links
+            p
+                a(href="http://book.agiletoolkit.org/")
+                    i.icon-tag-1.atk-swatch-blue
+                    &nbsp;
+                    | Agile Toolkit Documentation
+                    br
+

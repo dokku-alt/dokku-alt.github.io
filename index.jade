@@ -31,16 +31,18 @@ html(class='no-js')
                                 li
                                   a.atk-padding-small(href='try-it.html') Try It!
                                 li
+                                  a.atk-padding-small(href='manager.html') Web manager
+                                li
                                   a.atk-padding-small(href='javascript:void(0)') What's new?
                             .atk-cell.atk-text-nowrap
                               .atk-actions
-                                a.atk-label.atk-swatch-yellow(href='javascript:void(0)')
+                                a.atk-label.atk-swatch-yellow(href='https://github.com/dokku-alt/dokku-alt')
                                     i.icon-github-1
                                     &nbsp;
                                     | GitHub
 
                                 span.atk-sep ⋅
-                                a(href='javascript:void(0)') Contact
+                                a(href='https://github.com/dokku-alt/dokku-alt/issues') Contact
 
 
 
@@ -50,10 +52,14 @@ html(class='no-js')
                       block content
                         .atk-section-large.atk-swatch-gray
                             .atk-wrapper.atk-size-kilo
-                                | Dokku-alt is a Docker powered mini-Heroku. The smallest PaaS implementation you've ever seen.
-                                | It's fork of original dokku. The idea behind this fork is to provide complete
-                                | solution with plugins covering most of use-cases which are stable and well
-                                | tested.
+                                p
+                                    | Dokku-alt is a Docker powered mini-Heroku. The smallest PaaS implementation you've ever seen.
+                                    | It's a fork of original dokku. The idea behind this fork is to provide complete
+                                    | solution with plugins covering most of use-cases which are stable and well
+                                    | tested.
+                                p
+                                    | Install Dokku-alt on any Ubuntu server and deploy web apps, databases
+                                    | and even more complex infrastructures without worries about security.
                         .atk-section-large.atk-swatch-white
                             .atk-wrapper
                                 .atk-row
@@ -66,7 +72,11 @@ html(class='no-js')
                                             br
                                             i.icon-check.atk-swatch-green
                                             &nbsp;
-                                            | Git deploy
+                                            | Command Line or Web Control utility
+                                            br
+                                            i.icon-check.atk-swatch-green
+                                            &nbsp;
+                                            | Deploy projects with git remote
                                             br
                                             i.icon-check.atk-swatch-green
                                             &nbsp;
@@ -74,47 +84,23 @@ html(class='no-js')
                                             br
                                             i.icon-check.atk-swatch-green
                                             &nbsp;
-                                            | Built-in support for Dockerfile
+                                            | Use Heiroku-style buildpacks, Dockerfile or Procfile
                                             br
                                             i.icon-check.atk-swatch-green
                                             &nbsp;
-                                            | Built-in support for service-only applications
+                                            | Domain control support, aliases, redirects and SSL
                                             br
                                             i.icon-check.atk-swatch-green
                                             &nbsp;
-                                            | Built-in support for domains and redirects
+                                            | Support for docker volumes and custom port configurations
                                             br
                                             i.icon-check.atk-swatch-green
                                             &nbsp;
-                                            | Built-in support for TLS and wildcard certificates
+                                            | Zero-downtime deploy, handy diagostics and debug tools
                                             br
                                             i.icon-check.atk-swatch-green
                                             &nbsp;
-                                            | Built-in support for Docker-args and container persistent volumes
-                                            br
-                                            i.icon-check.atk-swatch-green
-                                            &nbsp;
-                                            | Built-in support for container's TOP
-                                            br
-                                            i.icon-check.atk-swatch-green
-                                            &nbsp;
-                                            | Built-in support for foreman-based Procfile
-                                            br
-                                            i.icon-check.atk-swatch-green
-                                            &nbsp;
-                                            | Data volumes with host-based volumes
-                                            br
-                                            i.icon-check.atk-swatch-green
-                                            &nbsp;
-                                            | Preboot / zero-downtime deploy
-                                            br
-                                            i.icon-check.atk-swatch-green
-                                            &nbsp;
-                                            | Enter and exec commands in already running containers
-                                            br
-                                            i.icon-check.atk-swatch-green
-                                            &nbsp;
-                                            | Access-control: deploy only keys (BETA)
+                                            | Access-control: full access or deploy-only.
 
 
                                     .atk-col-4
